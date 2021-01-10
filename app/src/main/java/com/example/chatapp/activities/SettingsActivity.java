@@ -67,7 +67,8 @@ public class SettingsActivity extends AppCompatActivity {
 
 
 
-
+        //Storage database
+        mImageStorage = FirebaseStorage.getInstance().getReference();
 
 
 
@@ -75,9 +76,8 @@ public class SettingsActivity extends AppCompatActivity {
         String current_uid = mCurrentUser.getUid();
         mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(current_uid);
 
+        mUserDatabase.keepSynced(true);
 
-        //Storage database
-        mImageStorage = FirebaseStorage.getInstance().getReference();
 
 
         mUserDatabase.addValueEventListener(new ValueEventListener() {

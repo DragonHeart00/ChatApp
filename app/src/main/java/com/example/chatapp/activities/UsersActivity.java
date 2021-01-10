@@ -53,7 +53,7 @@ public class UsersActivity extends AppCompatActivity {
     }
 
 
-/*
+
 
 
     @Override
@@ -109,7 +109,7 @@ public class UsersActivity extends AppCompatActivity {
         }
 
         public void setName(String name){
-            TextView show_name = mView.findViewById(R.id.user_single_image);
+            TextView show_name = mView.findViewById(R.id.user_single_name);
             show_name.setText(name);
         }
 
@@ -127,5 +127,5 @@ public class UsersActivity extends AppCompatActivity {
 //        }
 
     }
- */
+
 }
