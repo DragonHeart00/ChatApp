@@ -53,65 +53,32 @@
 
     <Button
         android:id="@+id/profile_btnSendFriendRequest"
-        android:layout_width="wrap_content"
+        android:layout_width="149dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_friends_info"
         android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
         android:layout_marginTop="25dp"
         android:background="?attr/selectableItemBackground"
         android:padding="10dp"
+        android:textSize="12dp"
         android:text="Send friend request"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/profile_btnCancelRequest"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_below="@+id/profile_btnUnfriend"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        android:background="?attr/selectableItemBackground"
-        android:padding="10dp"
-        android:text="Cancel friend request"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/profile_btnUnfriend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profile_friends_info"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="102dp"
-        android:background="?attr/selectableItemBackground"
-        android:padding="10dp"
-        android:text="Unfriend"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/profile_btnAcceptRequest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profile_btnSendFriendRequest"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="30dp"
-        android:background="?attr/selectableItemBackground"
-        android:padding="10dp"
-        android:text="Accept"
-        android:textStyle="bold" />
 
     <Button
         android:id="@+id/profile_btnDeclineRequest"
-        android:layout_width="wrap_content"
+        android:layout_width="149dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_btnSendFriendRequest"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="49dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
         android:layout_marginRight="50dp"
         android:background="?attr/selectableItemBackground"
         android:padding="10dp"
-        android:text="Decline"
+        android:textSize="12dp"
+        android:text="Decline friend request"
+        android:textAllCaps="false"
         android:textStyle="bold" />
 
 </RelativeLayout>
