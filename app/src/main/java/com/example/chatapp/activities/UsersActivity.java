@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -67,12 +70,20 @@ public class UsersActivity extends AppCompatActivity {
 
                 holder.setName(model.getName());
                 holder.setStatus(model.getStatus());
-              //  holder.setImage(model.getImage());
-                Log.d("TAG", "--------------");
-                Log.d("TAG", "users.getName() : " + model.getName());
-                Log.d("TAG", "users.getStatus() : " + model.getStatus());
-                Log.d("TAG", "users.getThumb_image() : " + model.getImage());
+                holder.SetThumbImage(model.getThumb_image());
+
                 final String selected_user_id = getRef(position).getKey();
+
+                holder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent profileIntent = new Intent(UsersActivity.this, ProfileActivity.class);
+                        profileIntent.putExtra("user_id", selected_user_id);
+                        startActivity(profileIntent);
+                    }
+                });
+
+
 
 
 
@@ -118,14 +129,14 @@ public class UsersActivity extends AppCompatActivity {
             show_status.setText(status);
         }
 
-//        public void setImage(String url_avatar){
-//            CircleImageView userAvatarView = mView.findViewById(R.id.user_single_image);
-////                if user hadn't set avatar display default avatar
-//            if(!url_avatar.equals("default")){
-//                Picasso.get().load(url_avatar).placeholder(R.drawable.defaultavatar).into(userAvatarView);
-//            }
-//        }
+        public void SetThumbImage(String url_avatar){
+            CircleImageView imageView = mView.findViewById(R.id.user_single_image);
+//                if user hadn't set avatar display default avatar
+            if(!url_avatar.equals("default")){
 
+                Picasso.get().load(url_avatar).placeholder(R.drawable.profile).into(imageView);
+            }
+        }
     }
 
 }
